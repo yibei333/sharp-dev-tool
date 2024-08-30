@@ -1,0 +1,9 @@
+引用:https://github.com/ElectronNET/Electron.NET
+
+1.安装环境
+dotnet tool install ElectronNET.CLI -g
+
+2.发布
+electronize build /target win
+electronize build /target osx
+electronize build /target linux
