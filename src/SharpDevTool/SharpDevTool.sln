@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpDevTool.Linux", "SharpDevTool.Linux\SharpDevTool.Linux.csproj", "{6A731E8C-83DD-4AF1-BEE7-73E87834159F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A731E8C-83DD-4AF1-BEE7-73E87834159F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A731E8C-83DD-4AF1-BEE7-73E87834159F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A731E8C-83DD-4AF1-BEE7-73E87834159F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A731E8C-83DD-4AF1-BEE7-73E87834159F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45BDBD48-4D5A-4EE3-945D-884D4A7F89A5}
+	EndGlobalSection
+EndGlobal
