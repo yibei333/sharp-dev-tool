@@ -1,19 +1,33 @@
-using ElectronNET.API;
 
-var builder = WebApplication.CreateBuilder(args);
-builder.WebHost.UseElectron(args);
-builder.Services.AddElectron();
-builder.Services.AddRazorComponents();
+using Microsoft.Extensions.DependencyInjection;
+using Photino.Blazor;
+using SharpDevTool.Linux;
 
-var app = builder.Build();
-app.UseStaticFiles();
-app.UseAntiforgery();
-app.MapRazorComponents<SharpDevTool.Linux.Home>();
-await app.StartAsync();
+class Program
+{
+    [STAThread]
+    private static void Main(string[] args)
+    {
+        var appBuilder = PhotinoBlazorAppBuilder.CreateDefault(args);
 
-await Electron.WindowManager.CreateWindowAsync();
-#if DEBUG
-#else
-Electron.WindowManager.BrowserWindows.FirstOrDefault()?.RemoveMenu();
-#endif
-app.WaitForShutdown();
+        appBuilder.Services
+            .AddLogging();
+
+        // register root component and selector
+        appBuilder.RootComponents.Add<Home>("app");
+
+        var app = appBuilder.Build();
+
+        // customize window
+        app.MainWindow
+            .SetIconFile("wwwroot/favicon.ico")
+            .SetTitle("Photino Blazor Sample");
+
+        AppDomain.CurrentDomain.UnhandledException += (sender, error) =>
+        {
+            app.MainWindow.ShowMessage("Fatal exception", error.ExceptionObject.ToString());
+        };
+
+        app.Run();
+    }
+}
