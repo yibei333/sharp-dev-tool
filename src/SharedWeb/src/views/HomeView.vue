@@ -5,12 +5,14 @@ export default {
   data() {
     return {
       service: new SharpService(),
-      message: 'init',
+      platform: '',
+      message: 'int',
       input: 'init',
       count: 1,
     }
   },
-  mounted() {
+  async mounted() {
+    this.platform = await this.service.getPlatform();
     this.service.invokeAsync('GetMessage', this.input).then(x => {
       this.message = x;
     });
@@ -33,6 +35,7 @@ export default {
 
 <template>
   <div class="home">
+    <h2>{{ platform }}</h2>
     <h2>{{ message }}</h2>
     <h2>{{ count }}</h2>
     <input v-model="input" />

@@ -54,10 +54,10 @@
 		<ProjectReference Include="..\SharpDevTool.Shared\SharpDevTool.Shared.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<Content Include="..\..\SharedWeb\dist\**\*" Exclude="..\..\SharedWeb\dist\platform.js">
+	<!--<ItemGroup>
+		<Content Include="..\..\SharedWeb\dist\**\*">
 			<Link>wwwroot\%(RecursiveDir)/%(FileName)%(Extension)</Link>
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
-	</ItemGroup>
+	</ItemGroup>-->
 </Project>
