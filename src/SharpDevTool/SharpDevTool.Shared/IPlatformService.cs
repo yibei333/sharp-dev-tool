@@ -1,4 +1,4 @@
-﻿namespace SharpDevTool.Shared.Services;
+﻿namespace SharpDevTool.Shared;
 
 public interface IPlatformService
 {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.JSInterop;
 
-namespace SharpDevTool.Shared.Services;
+namespace SharpDevTool.Shared;
 
 public static class Services
 {

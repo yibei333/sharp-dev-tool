@@ -1,9 +1,9 @@
 
 using Microsoft.Extensions.DependencyInjection;
 using Photino.Blazor;
+using SharpDevTool.Desktop.Components;
 using SharpDevTool.Desktop.Services;
 using SharpDevTool.Shared;
-using SharpDevTool.Shared.Services;
 
 class Program
 {

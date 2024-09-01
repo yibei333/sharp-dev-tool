@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpDevTool.Desktop", "SharpDevTool.Desktop\SharpDevTool.Desktop.csproj", "{A9092874-FA24-4FD7-ABC0-ED48F537211F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharpDevTool.Desktop", "SharpDevTool.Desktop\SharpDevTool.Desktop.csproj", "{A9092874-FA24-4FD7-ABC0-ED48F537211F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpDevTool.Shared", "SharpDevTool.Shared\SharpDevTool.Shared.csproj", "{5B38540B-D5B0-4A1B-AD7F-CCB486759698}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharpDevTool.Shared", "SharpDevTool.Shared\SharpDevTool.Shared.csproj", "{5B38540B-D5B0-4A1B-AD7F-CCB486759698}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpDevTool.Mobile", "SharpDevTool.Mobile\SharpDevTool.Mobile.csproj", "{90AAE850-46E2-472D-98B8-7530F0494ED0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,12 @@ Global
 		{5B38540B-D5B0-4A1B-AD7F-CCB486759698}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B38540B-D5B0-4A1B-AD7F-CCB486759698}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B38540B-D5B0-4A1B-AD7F-CCB486759698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90AAE850-46E2-472D-98B8-7530F0494ED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90AAE850-46E2-472D-98B8-7530F0494ED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90AAE850-46E2-472D-98B8-7530F0494ED0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{90AAE850-46E2-472D-98B8-7530F0494ED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90AAE850-46E2-472D-98B8-7530F0494ED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90AAE850-46E2-472D-98B8-7530F0494ED0}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

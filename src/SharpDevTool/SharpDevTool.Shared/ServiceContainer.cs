@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace SharpDevTool.Shared.Services;
+namespace SharpDevTool.Shared;
 
 public static class ServiceContainer
 {

@@ -1,11 +1,11 @@
 ﻿using SharpDevTool.Shared;
 
-namespace SharpDevTool.Desktop.Services;
+namespace SharpDevTool.Mobile.Services;
 
 internal class PlatformService : IPlatformService
 {
     public string Get()
     {
-        return "Desktop";
+        return "Mobile";
     }
 }
