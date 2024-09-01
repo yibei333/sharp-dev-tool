@@ -1,13 +1,20 @@
 
 using Microsoft.Extensions.DependencyInjection;
 using Photino.Blazor;
-using SharpDevTool.Linux;
+using SharpDevTool.Desktop.Services;
+using SharpDevTool.Shared;
+using SharpDevTool.Shared.Services;
 
 class Program
 {
     [STAThread]
     private static void Main(string[] args)
     {
+        ServiceContainer.Init(services =>
+        {
+            services.AddSingleton<IPlatformService, PlatformService>();
+        });
+
         var appBuilder = PhotinoBlazorAppBuilder.CreateDefault(args);
         appBuilder.Services.AddLogging();
         appBuilder.RootComponents.Add<Home>("app");

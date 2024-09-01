@@ -1,6 +1,6 @@
 ﻿using Microsoft.JSInterop;
 
-namespace SharpDevTool.Linux.Services;
+namespace SharpDevTool.Shared.Services;
 
 public class Request
 {

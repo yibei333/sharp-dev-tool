@@ -1,6 +1,7 @@
-﻿using Microsoft.JSInterop;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.JSInterop;
 
-namespace SharpDevTool.Linux.Services;
+namespace SharpDevTool.Shared.Services;
 
 public static class Services
 {
@@ -18,7 +19,8 @@ public static class Services
         {
             await request.OptionInstance.InvokeVoidAsync("test", request.Data?.Message?.Length ?? 0);
         }
-        return $"ok,{request.Data?.Message}";
+        var platformService = ServiceContainer.ServiceProvider.GetRequiredService<IPlatformService>();
+        return $"ok,{platformService.Get()},{request.Data?.Message}";
     }
 }
 

@@ -7,6 +7,7 @@ export class SharpService {
             let timer = setInterval(() => {
                 if (document.getElementById('razor-page-loaded')) {
                     resolve();
+                    clearInterval(timer);
                 }
             }, 100);
         });
@@ -14,7 +15,7 @@ export class SharpService {
 
     async invokeAsync(methodName, params) {
         await this.ensureRazorPageLoaded();
-        return DotNet.invokeMethodAsync('SharpDevTool.Linux', methodName, params);
+        return DotNet.invokeMethodAsync('SharpDevTool.Shared', methodName, params);
     }
 
     async invokeWithReferenceAsync(methodName, params) {
@@ -23,6 +24,6 @@ export class SharpService {
             optionInstance: DotNet.createJSObjectReference(params),
             data: params
         };
-        return DotNet.invokeMethodAsync('SharpDevTool.Linux', methodName, request);
+        return DotNet.invokeMethodAsync('SharpDevTool.Shared', methodName, request);
     }
 }
