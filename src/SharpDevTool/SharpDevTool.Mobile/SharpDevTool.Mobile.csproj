@@ -9,6 +9,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<EnableDefaultCssItems>false</EnableDefaultCssItems>
 		<Nullable>enable</Nullable>
+		<AndroidPackageFormat>apk</AndroidPackageFormat>
 
 		<!-- Display name -->
 		<ApplicationTitle>SharpDevTool.Mobile</ApplicationTitle>
