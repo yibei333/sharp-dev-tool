@@ -17,7 +17,7 @@ public static class Services
     {
         if (request.OptionInstance is not null)
         {
-            await request.OptionInstance.InvokeVoidAsync("test", request.Data?.Message?.Length ?? 0);
+            await request.OptionInstance.InvokeVoidAsync("invokeJsMethod", request.Data?.Message?.Length ?? 0);
         }
         var platformService = ServiceContainer.ServiceProvider.GetRequiredService<IPlatformService>();
         return $"ok,{platformService.Get()},{request.Data?.Message}";
