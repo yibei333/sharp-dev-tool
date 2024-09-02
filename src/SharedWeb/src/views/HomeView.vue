@@ -23,7 +23,7 @@ export default {
     getMessage() {
       let data = {
         message: this.input,
-        test: (count) => {
+        invokeJsMethod: (count) => {
           this.count = count;
         }
       };
@@ -41,6 +41,6 @@ export default {
     <h2>{{ message }}</h2>
     <h2>{{ count }}</h2>
     <input v-model="input" />
-    <button @click="getMessage">test</button>
+    <button @click="getMessage">getMessage</button>
   </div>
 </template>

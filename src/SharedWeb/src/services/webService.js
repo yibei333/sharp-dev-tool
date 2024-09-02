@@ -9,7 +9,7 @@ export class WebService {
 
     async invokeWithReferenceAsync(methodName, params) {
         if (methodName == 'GetOtherMessage') {
-            params.test(params.message.length);
+            params.invokeJsMethod(params.message.length);
             return `from dev other:${params.message}`;
         } else {
             throw `${methodName} not implemented`;
