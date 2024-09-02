@@ -5,6 +5,9 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<OutputType>WinExe</OutputType>
 		<ApplicationIcon>favicon.ico</ApplicationIcon>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0.0.0</ApplicationDisplayVersion>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Photino.Blazor" Version="3.1.8" />
