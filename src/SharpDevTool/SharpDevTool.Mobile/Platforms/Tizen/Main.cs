@@ -2,7 +2,7 @@ using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using System;
 
-namespace SharpDevTool.Mobile.Platforms.Tizen
+namespace SharpDevTool.Mobile
 {
     internal class Program : MauiApplication
     {

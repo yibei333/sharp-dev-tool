@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace SharpDevTool.Mobile.Platforms.Android
+namespace SharpDevTool.Mobile
 {
     [Application]
     public class MainApplication(IntPtr handle, JniHandleOwnership ownership) : MauiApplication(handle, ownership)

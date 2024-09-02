@@ -1,6 +1,6 @@
 ﻿using UIKit;
 
-namespace SharpDevTool.Mobile.Platforms.iOS
+namespace SharpDevTool.Mobile
 {
     public class Program
     {

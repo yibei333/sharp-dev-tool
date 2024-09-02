@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace SharpDevTool.Mobile.Platforms.iOS
+namespace SharpDevTool.Mobile
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate
