@@ -1,4 +1,4 @@
-let currentPlatform = 'dev';
+let currentPlatform = 'web';
 
 let section=document.createElement('section');
 section.id='razor-page-loaded';

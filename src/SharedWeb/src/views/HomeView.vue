@@ -1,10 +1,10 @@
 <script>
-import { SharpService } from '../services/sharp'
+import { ServiceProvider } from '../services/serviceProvider'
 
 export default {
   data() {
     return {
-      service: new SharpService(),
+      service: null,
       platform: '',
       message: 'int',
       input: 'init',
@@ -12,7 +12,9 @@ export default {
     }
   },
   async mounted() {
-    this.platform = await this.service.getPlatform();
+    let serviceProvider = new ServiceProvider();
+    this.platform = await serviceProvider.getPlatform();
+    this.service = await serviceProvider.getService();
     this.service.invokeAsync('GetMessage', this.input).then(x => {
       this.message = x;
     });
