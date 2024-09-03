@@ -8,12 +8,8 @@ namespace SharpDevTool.Mobile
     {
         public static MauiApp CreateMauiApp()
         {
-            ServiceContainer.Init(services =>
-            {
-                services.AddSingleton<IPlatformService, PlatformService>();
-            });
-
             var builder = MauiApp.CreateBuilder();
+            builder.Services.AddSingleton<IPlatformService, PlatformService>();
             builder
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
@@ -28,7 +24,9 @@ namespace SharpDevTool.Mobile
             builder.Logging.AddDebug();
 #endif
 
-            return builder.Build();
+            var app = builder.Build();
+            SharpDevTool.Shared.Services.SetProvider(app.Services);
+            return app;
         }
     }
 }

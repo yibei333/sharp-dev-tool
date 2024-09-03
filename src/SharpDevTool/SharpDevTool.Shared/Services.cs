@@ -5,6 +5,15 @@ namespace SharpDevTool.Shared;
 
 public static class Services
 {
+    static IServiceProvider? _serviceProvider;
+
+    static IServiceProvider ServiceProvider => _serviceProvider ?? throw new Exception("please call SharpDevTool.Shared.Services.SetProvider method");
+
+    public static void SetProvider(IServiceProvider serviceProvider)
+    {
+        _serviceProvider = serviceProvider;
+    }
+
     [JSInvokable]
     public static async Task<string> GetMessage(string text)
     {
@@ -19,7 +28,7 @@ public static class Services
         {
             await request.OptionInstance.InvokeVoidAsync("invokeJsMethod", request.Data?.Message?.Length ?? 0);
         }
-        var platformService = ServiceContainer.ServiceProvider.GetRequiredService<IPlatformService>();
+        var platformService = ServiceProvider.GetRequiredService<IPlatformService>();
         return $"ok,{platformService.Get()},{request.Data?.Message}";
     }
 }
