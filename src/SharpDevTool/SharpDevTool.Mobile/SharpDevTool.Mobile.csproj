@@ -53,7 +53,6 @@
 	<ItemGroup>
 		<Content Include="..\..\SharedWeb\dist\**\*" Exclude="..\..\SharedWeb\dist\platform.js">
 			<Link>wwwroot\%(RecursiveDir)/%(FileName)%(Extension)</Link>
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
 	</ItemGroup>
 </Project>

@@ -14,9 +14,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Content Include="..\..\SharedWeb\dist\**\*" Exclude="..\..\SharedWeb\dist\platform.js">
+		<None Include="..\..\SharedWeb\dist\**\*" Exclude="..\..\SharedWeb\dist\platform.js">
 			<Link>wwwroot\%(RecursiveDir)/%(FileName)%(Extension)</Link>
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</Content>
+		</None>
 	</ItemGroup>
 </Project>
