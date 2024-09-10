@@ -5,6 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<OutputType>WinExe</OutputType>
 		<ApplicationIcon>favicon.ico</ApplicationIcon>
+		<AssemblyName>SharpDevTool</AssemblyName>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0.0.0</ApplicationDisplayVersion>

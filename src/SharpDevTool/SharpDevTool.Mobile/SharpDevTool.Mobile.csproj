@@ -12,10 +12,10 @@
 		<AndroidPackageFormat>apk</AndroidPackageFormat>
 
 		<!-- Display name -->
-		<ApplicationTitle>SharpDevTool.Mobile</ApplicationTitle>
+		<ApplicationTitle>SharpDevTool</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.sharpdevtool.mobile</ApplicationId>
+		<ApplicationId>com.yibei333.sharpdevtool</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0.0.0</ApplicationDisplayVersion>
