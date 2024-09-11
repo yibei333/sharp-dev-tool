@@ -3,6 +3,7 @@ using Photino.Blazor;
 using SharpDevTool.Desktop.Components;
 using SharpDevTool.Desktop.Services;
 using SharpDevTool.Shared;
+using System.Reflection;
 
 class Program
 {
@@ -17,7 +18,7 @@ class Program
         var app = appBuilder.Build();
         HandleException(app);
         Services.SetProvider(app.Services);
-        app.MainWindow.SetIconFile("wwwroot/favicon.ico").SetTitle("C#开发工具").SetDevToolsEnabled(true).SetContextMenuEnabled(true);
+        app.MainWindow.SetIconFile("wwwroot/favicon.ico").SetTitle(Assembly.GetExecutingAssembly().GetName().Name).SetDevToolsEnabled(true).SetContextMenuEnabled(true);
         app.MainWindow.RegisterWindowCreatedHandler((obj, args) => RemoveShortcut(app));
         app.Run();
 
