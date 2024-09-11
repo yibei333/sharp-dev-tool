@@ -3,7 +3,6 @@ using Photino.Blazor;
 using SharpDevTool.Desktop.Components;
 using SharpDevTool.Desktop.Services;
 using SharpDevTool.Shared;
-using System.Reflection;
 
 class Program
 {
@@ -18,8 +17,18 @@ class Program
         var app = appBuilder.Build();
         HandleException(app);
         Services.SetProvider(app.Services);
-        app.MainWindow.SetIconFile("wwwroot/favicon.ico").SetTitle(Assembly.GetEntryAssembly()?.GetName().Name).SetDevToolsEnabled(true).SetContextMenuEnabled(true);
+        app.MainWindow.SetIconFile("wwwroot/favicon.ico").SetTitle("C#开发工具").SetDevToolsEnabled(true).SetContextMenuEnabled(true);
+        app.MainWindow.RegisterWindowCreatedHandler((obj, args) => RemoveShortcut(app));
         app.Run();
+
+    }
+
+    static void RemoveShortcut(PhotinoBlazorApp app)
+    {
+        //var path = @"C:\Users\Devel\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\C#开发工具.lnk";
+        //var isExist = File.Exists(path);
+        //if (isExist) File.Delete(path);
+        //app.MainWindow.ShowMessage("Fatal exception", "ok");
     }
 
     static void HandleException(PhotinoBlazorApp app)
